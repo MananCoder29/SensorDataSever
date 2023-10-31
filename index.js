@@ -32,7 +32,7 @@ try {
 } catch (error) {
 	console.error(error);
 }
-httpServer.listen(port, () => {
+httpServer.listen(process.env.PORT || port, () => {
   console.log("HTTP Server running on port " + port);
 });
 
@@ -138,7 +138,7 @@ app.get("/multiSensorData", async (req, res) => {
         const FPD = jsonObj.FPD[0][0];
         const dateTime = FPD[0];
         const temperature = FPD[1];
-        const brightness = FPD[2];
+        const brightness = FPD[3];
         const persons = req.query.persons ? Number(req.query.persons) + 1: 1;
         console.log(req.query.persons);
         const customJSON = {dateTime: dateTime, temperature: temperature, brightness: brightness, persons: persons};
