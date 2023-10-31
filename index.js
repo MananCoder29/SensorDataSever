@@ -15,26 +15,26 @@ app.use(
   })
 );
 
-const axios = require('axios');
+// const axios = require('axios');
 
-const options = {
-  method: 'GET',
-  url: 'https://forecast9.p.rapidapi.com/rapidapi/forecast/Berlin/hourly/',
-  headers: {
-    'X-RapidAPI-Key': '0dd87ed2f0msh411a2271a26db2ep135c0ajsnf7afccd03736',
-    'X-RapidAPI-Host': 'forecast9.p.rapidapi.com'
-  }
-};
+// const options = {
+//   method: 'GET',
+//   url: 'https://forecast9.p.rapidapi.com/rapidapi/forecast/Berlin/hourly/',
+//   headers: {
+//     'X-RapidAPI-Key': '0dd87ed2f0msh411a2271a26db2ep135c0ajsnf7afccd03736',
+//     'X-RapidAPI-Host': 'forecast9.p.rapidapi.com'
+//   }
+// };
 
-try {
-	const response = axios.request(options);
-	console.log(response.data);
-} catch (error) {
-	console.error(error);
-}
-httpServer.listen(process.env.PORT || port, () => {
-  console.log("HTTP Server running on port " + port);
-});
+// try {
+// 	const response = axios.request(options);
+// 	console.log(response.data);
+// } catch (error) {
+// 	console.error(error);
+// }
+// httpServer.listen(process.env.PORT || port, () => {
+//   console.log("HTTP Server running on port " + port);
+// });
 
 async function login(token) {
   let newToken = null;
