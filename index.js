@@ -32,9 +32,9 @@ app.use(
 // } catch (error) {
 // 	console.error(error);
 // }
-// httpServer.listen(process.env.PORT || port, () => {
-//   console.log("HTTP Server running on port " + port);
-// });
+httpServer.listen(process.env.PORT || port, () => {
+  console.log("HTTP Server running on port " + port);
+});
 
 async function login(token) {
   let newToken = null;
